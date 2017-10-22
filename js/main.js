@@ -123,11 +123,19 @@ $(document).ready( function() {
                 url: 'https://formspree.io/rachel.shultz@yahoo.com',
                 data: $(this).serialize(),
                 dataType: 'json',
+                beforeSend: function() {
+                	alert($(this).serialize());
+                	$("#con_submit").val('Sending...');
+                }
                 success: function(data)
                 {
                     $(".contact-form input, .contact-form textarea").val('');
                     $("#con_submit").val('Done!');
 					$("#con_submit").addClass("ok");
+                },
+                error: function(data) 
+                {
+                	$("#con_submit").val('Failed!');
                 }
             });
         }
