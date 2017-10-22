@@ -126,7 +126,7 @@ $(document).ready( function() {
                 beforeSend: function() {
                 	alert($(this).serialize());
                 	$("#con_submit").val('Sending...');
-                }
+                },
                 success: function(data)
                 {
                     $(".contact-form input, .contact-form textarea").val('');
