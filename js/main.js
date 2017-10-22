@@ -97,6 +97,14 @@ $(document).ready( function() {
         var con_email = $("#con_email").val();
         var con_message = $("#con_message").val();
         
+        var submission_data = {
+                	 name:con_name,
+	                _replyto:con_email,
+	                 email:con_email,
+	                comments:con_message,
+	                _subject:'Website Contact Form'
+                };
+
         var required = 0;
         $(".requie", this).each(function() {
             if ($(this).val() == '')
@@ -121,16 +129,10 @@ $(document).ready( function() {
             $.ajax({
                 type: "POST",
                 url: 'https://formspree.io/rachel.shultz@yahoo.com',
-                data: {
-                	 name:con_name,
-	                _replyto:con_email,
-	                 email:con_email,
-	                comments:con_message,
-	                _subject:'Website Contact Form'
-                },
+                data: submission_data,
                 dataType: 'json',
                 beforeSend: function() {
-                	alert($(this).serialize());
+                	console.log(submission_data);
                 	$("#con_submit").val('Sending...');
                 },
                 success: function(data)
