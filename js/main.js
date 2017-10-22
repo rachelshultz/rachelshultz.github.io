@@ -139,7 +139,7 @@ $(document).ready( function() {
                 success: function(data)
                 {
                     $(".contact-form input, .contact-form textarea").val('');
-                    $("#con_submit").val('Done!');
+                    $("#con_submit").val('Sent!');
 					$("#con_submit").addClass("ok");
                 },
                 error: function(data) 
