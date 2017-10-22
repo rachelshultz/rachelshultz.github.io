@@ -133,7 +133,7 @@ $(document).ready( function() {
                 data: submission_data,
                 dataType: 'json',
                 beforeSend: function() {
-                	console.log(submission_data);
+                	//console.log(submission_data);
                 	$("#con_submit").val('Sending...');
                 },
                 success: function(data)
