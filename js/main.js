@@ -128,6 +128,7 @@ $(document).ready( function() {
         {
             $.ajax({
                 type: "POST",
+                method: "POST",
                 url: 'https://formspree.io/rachel.shultz@yahoo.com',
                 data: submission_data,
                 dataType: 'json',
