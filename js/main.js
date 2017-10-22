@@ -120,8 +120,9 @@ $(document).ready( function() {
         {
             $.ajax({
                 type: "POST",
-                url: 'mail.php',
-                data: {con_name: con_name, con_email: con_email, con_message: con_message},
+                url: 'https://formspree.io/rachel.shultz@yahoo.com',
+                data: $(this).serialize(),
+                dataType: 'json',
                 success: function(data)
                 {
                     $(".contact-form input, .contact-form textarea").val('');
