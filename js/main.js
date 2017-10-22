@@ -121,7 +121,13 @@ $(document).ready( function() {
             $.ajax({
                 type: "POST",
                 url: 'https://formspree.io/rachel.shultz@yahoo.com',
-                data: $(this).serialize(),
+                data: {
+                	 name:con_name,
+	                _replyto:con_email,
+	                 email:con_email,
+	                comments:con_message,
+	                _subject:'Website Contact Form',
+                },
                 dataType: 'json',
                 beforeSend: function() {
                 	alert($(this).serialize());
