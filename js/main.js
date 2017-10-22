@@ -126,7 +126,7 @@ $(document).ready( function() {
 	                _replyto:con_email,
 	                 email:con_email,
 	                comments:con_message,
-	                _subject:'Website Contact Form',
+	                _subject:'Website Contact Form'
                 },
                 dataType: 'json',
                 beforeSend: function() {
